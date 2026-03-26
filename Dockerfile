@@ -1,11 +1,13 @@
 FROM node:22-slim
 
+RUN apt-get update -qq && apt-get install -y --no-install-recommends openssl && rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
 WORKDIR /app
 
 COPY package*.json ./
 COPY prisma ./prisma/
 
-RUN npm ci --include=dev
+RUN npm install
 
 COPY . .
 
