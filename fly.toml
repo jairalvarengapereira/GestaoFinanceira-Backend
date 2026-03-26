@@ -1,2 +1,8 @@
+[[services]]
+  http_services = [
+    { internal_port = 3333, protocol = "tcp" }
+  ]
+
 [deploy]
   release_command = ""
+  region = "gru"
