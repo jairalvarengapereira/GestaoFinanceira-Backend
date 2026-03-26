@@ -1,2 +1,2 @@
 [deploy]
-  release_command = "echo 'Database already synced'"
+  release_command = ""
